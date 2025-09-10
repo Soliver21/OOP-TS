@@ -3,7 +3,7 @@ export class SeriesOfNumbers{
     //Attribútumok (tulajdonságok [az osztály változói]) - rejtettek (private)
     private _count : number; //számosság
     private _value :number; //a generált számok felső határa
-    private _list : number[]; //a számok listája
+    protected _list : number[]; //a számok listája
     constructor(count :number, value :number, rng : (max :number) => number = SeriesOfNumbers.rnd){
         if (count <= 0) {
             throw new Error("A számosság pozitív egész legyen");
